@@ -22,58 +22,76 @@ let _programmingBooks: [ProgrammingBook] = [
 struct ContentView: View {
     var programmingBooks: [ProgrammingBook] = _programmingBooks
     var body: some View {
-        VStack(alignment: .center){
+        NavigationView {
+            VStack(alignment: .center){
+                NavigationLink(destination: DetailView()) {
+                    HStack{
+                        VStack {
+                            Image("Bowl")
+                                .resizable()
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                            Text("Food")
+                                .fontWeight(.semibold)
+                                .font(.title)
+                                .foregroundColor(Color.green)
+                        }
+//                      VStack{
+//                            Button(action: {
+//                                print("Jump To Water Page")
+//                            }) {
+//                                VStack {
+//                                    Image("Water")
+//                                        .resizable()
+//                                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+//                                        .scaledToFit()
+//                                        .frame(width: 100, height: 100)
+//                                    Text("Water")
+//                                        .fontWeight(.semibold)
+//                                        .font(.title)
+//                                }
+//                            }
+//                        }
+                    }
+                }
             HStack{
                 VStack{
-                    Image("Bowl")
-                        .resizable()
-                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                    Text("吃飯飯")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Moderate blue"))
-                        .padding(.all)
+                    Button(action: {
+                        print("Jump To Pupu Page")
+                    }) {
+                        VStack {
+                            Image("Pupu")
+                                .resizable()
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                            Text("Pupu")
+                                .fontWeight(.semibold)
+                                .font(.title)
+                                .foregroundColor(Color.pink)
+                        }
+                    }
                 }
                 VStack{
-                    Image("Water")
-                         .resizable()
-                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                         .scaledToFit()
-                         .frame(width: 200, height: 200)
-                    Text("喝水水")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Moderate blue"))
-                        .padding(.all)
+                    Button(action: {
+                        print("Jump To Walk Page")
+                    }) {
+                        VStack {
+                            Image("Paw")
+                                .resizable()
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                            Text("Walk")
+                                .fontWeight(.semibold)
+                                .font(.title)
+                                .foregroundColor(Color.orange)
+                        }
+                    }
                 }
+            .navigationTitle("Pet World")
             }
-            HStack{
-                VStack{
-                    Image("Pupu")
-                         .resizable()
-                         .padding(.all)
-                         .scaledToFit()
-                         .frame(width: 200, height: 200)
-                    Text("大便便")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Moderate blue"))
-                        .padding(.all)
-                }
-                VStack{
-                    Image("Paw")
-                        .resizable()
-                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                    Text("散步步")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Moderate blue"))
-                        .padding(.all)
-                }
             }
         }
     }
