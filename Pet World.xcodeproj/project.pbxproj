@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60A7571261D9B75009FEFB5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A7570261D9B75009FEFB5 /* DetailView.swift */; };
 		C69E539C261AF020008031AE /* Pet_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539B261AF020008031AE /* Pet_WorldApp.swift */; };
 		C69E539E261AF020008031AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539D261AF020008031AE /* ContentView.swift */; };
 		C69E53A0261AF024008031AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69E539F261AF024008031AE /* Assets.xcassets */; };
-		C69E53A3261AF024008031AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69E53A2261AF024008031AE /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C60A7570261D9B75009FEFB5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C69E5398261AF020008031AE /* Pet World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69E539B261AF020008031AE /* Pet_WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet_WorldApp.swift; sourceTree = "<group>"; };
 		C69E539D261AF020008031AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C69E539F261AF024008031AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C69E53A2261AF024008031AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C69E53A4261AF024008031AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +54,7 @@
 			children = (
 				C69E539B261AF020008031AE /* Pet_WorldApp.swift */,
 				C69E539D261AF020008031AE /* ContentView.swift */,
+				C60A7570261D9B75009FEFB5 /* DetailView.swift */,
 				C69E539F261AF024008031AE /* Assets.xcassets */,
 				C69E53A4261AF024008031AE /* Info.plist */,
 				C69E53A1261AF024008031AE /* Preview Content */,
@@ -64,7 +65,6 @@
 		C69E53A1261AF024008031AE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C69E53A2261AF024008031AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -126,7 +126,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C69E53A3261AF024008031AE /* Preview Assets.xcassets in Resources */,
 				C69E53A0261AF024008031AE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69E539E261AF020008031AE /* ContentView.swift in Sources */,
+				C60A7571261D9B75009FEFB5 /* DetailView.swift in Sources */,
 				C69E539C261AF020008031AE /* Pet_WorldApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
