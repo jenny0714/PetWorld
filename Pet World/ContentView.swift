@@ -21,75 +21,97 @@ let _programmingBooks: [ProgrammingBook] = [
 ]
 
 struct ContentView: View {
-    @State private var showingDetail = false
+    @State private var showingFoodDetail = false
+    @State private var showingWaterDetail = false
+    @State private var showingPupuDetail = false
+    @State private var showingWalkDetail = false
+
     var programmingBooks: [ProgrammingBook] = _programmingBooks
     var body: some View {
-        //NavigationView {
-        //VStack(alignment: .center) {
-        //HStack {
-        //NavigationLink(destination: DetailView()) {
-        Button(action: {
-            showingDetail = true
-        }) {
-            VStack {
-                Image("Bowl")
-                    .resizable()
-                    .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-                Text("Food")
-                .fontWeight(.semibold)
-                .font(.title)
-                .foregroundColor(Color.green)
-                .sheet(isPresented: $showingDetail) {
-                    DetailView()
+        VStack(alignment: .center) {
+            HStack {
+                Button(action: {
+                    showingFoodDetail = true
+                }) {
+                    VStack {
+                        Image("Bowl")
+                            .resizable()
+                            .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                        Text("Food")
+                            .fontWeight(.semibold)
+                            .font(.title)
+                            .foregroundColor(Color.green)
+                            .sheet(isPresented: $showingFoodDetail) {
+                                FoodDetailView()
+                            }
+                    }
+                }
+                
+                Button(action: {
+                    showingWaterDetail = true
+                }) {
+                    VStack {
+                        Image("Water")
+                            .resizable()
+                            .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                        Text("Water")
+                            .fontWeight(.semibold)
+                            .font(.title)
+                            .sheet(isPresented: $showingWaterDetail) {
+                                WaterDetailView()
+                            }
+                    }
                 }
             }
+            HStack() {
+                Button(action: {
+                    showingPupuDetail = true
+                }) {
+                VStack {
+                    Image("Pupu")
+                        .resizable()
+                        .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("Pupu")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                        .foregroundColor(Color.pink)
+                        .sheet(isPresented: $showingPupuDetail) {
+                            PupuDetailView()
+                        }
+                }
+                }
+                Button(action: {
+                    showingWalkDetail = true
+                }) {
+                VStack {
+                    Image("Paw")
+                        .resizable()
+                        .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                    Text("Walk")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                        .foregroundColor(Color.orange)
+                        .sheet(isPresented: $showingWalkDetail) {
+                            WalkDetailView()
+                        }
+                }
+                }
             }
-//        .navigationTitle("Pet World")
-//        VStack {
-//            Image("Water")
-//                .resizable()
-//                .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
-//                .scaledToFit()
-//                .frame(width: 100, height: 100)
-//            Text("Water")
-//                .fontWeight(.semibold)
-//                .font(.title)
-//        }
+        }
     }
 }
-//    HStack() {
-//        VStack {
-//            Image("Pupu")
-//                .resizable()
-//                .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
-//                .scaledToFit()
-//                .frame(width: 100, height: 100)
-//            Text("Pupu")
-//                .fontWeight(.semibold)
-//                .font(.title)
-//                .foregroundColor(Color.pink)
-//        }
-//        VStack {
-//            Image("Paw")
-//                .resizable()
-//                .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
-//                .scaledToFit()
-//                .frame(width: 100, height: 100)
-//            Text("Walk")
-//                .fontWeight(.semibold)
-//                .font(.title)
-//                .foregroundColor(Color.orange)
-//        }
-//    }
-//    //            }
-//    //        }
-//    //    }
-//    //}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
             ContentView(programmingBooks: _programmingBooks)
+        }
     }
-}

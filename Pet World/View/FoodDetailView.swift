@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct FoodDetailView: View {
     @Environment(\.presentationMode) private var presentationMode
     var body: some View {
         VStack {
             Button(action: {
-                print("飼料內容")
+                print("回主畫面,並新增一筆資料")
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("飼料")
@@ -22,7 +22,7 @@ struct DetailView: View {
             .buttonStyle(GradientBackgroundStyle())
 
             Button(action: {
-                print("鮮食內容")
+                print("回主畫面,並新增一筆資料")
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("鮮食")
@@ -32,7 +32,7 @@ struct DetailView: View {
             .buttonStyle(GradientBackgroundStyle())
 
             Button(action: {
-                print("罐頭內容")
+                print("回主畫面,並新增一筆資料")
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("罐頭")
@@ -40,29 +40,23 @@ struct DetailView: View {
                     .font(.title)
             }
             .buttonStyle(GradientBackgroundStyle())
+            
+            Button(action: {
+                print("返回回主畫面")
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("返回")
+                    .fontWeight(.semibold)
+                    .font(.title)
+            }
+            .buttonStyle(CancelButtonBackgroundStyle())
+
         }
-        .navigationTitle("Food Type")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct GradientBackgroundStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .padding()
-            .foregroundColor(.white)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.blue]), startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(40)
-            .padding(.horizontal, 20)
-            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
-    }
-}
-
-struct DetailView_Previews: PreviewProvider {
+struct FoodView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            DetailView()
-        }
+        FoodDetailView()
     }
 }
