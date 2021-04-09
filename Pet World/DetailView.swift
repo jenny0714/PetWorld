@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct DetailView: View {
+    @Environment(\.presentationMode) private var presentationMode
     var body: some View {
-        VStack{
+        VStack {
             Button(action: {
                 print("飼料內容")
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("飼料")
                     .fontWeight(.semibold)
                     .font(.title)
             }
             .buttonStyle(GradientBackgroundStyle())
-        
+
             Button(action: {
                 print("鮮食內容")
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("鮮食")
                     .fontWeight(.semibold)
                     .font(.title)
             }
             .buttonStyle(GradientBackgroundStyle())
-        
+
             Button(action: {
                 print("罐頭內容")
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("罐頭")
                     .fontWeight(.semibold)
@@ -39,12 +43,10 @@ struct DetailView: View {
         }
         .navigationTitle("Food Type")
         .navigationBarTitleDisplayMode(.inline)
-
     }
 }
 
 struct GradientBackgroundStyle: ButtonStyle {
-    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(minWidth: 0, maxWidth: .infinity)
@@ -54,7 +56,6 @@ struct GradientBackgroundStyle: ButtonStyle {
             .cornerRadius(40)
             .padding(.horizontal, 20)
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
-
     }
 }
 
@@ -65,4 +66,3 @@ struct DetailView_Previews: PreviewProvider {
         }
     }
 }
-    
