@@ -6,7 +6,6 @@
 // Image("chicken leg")
 
 import SwiftUI
-
 struct ProgrammingBook: Identifiable {
     var id = UUID()
     var name: String
@@ -109,9 +108,8 @@ struct ContentView: View {
     }
 }
 
-
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
             ContentView(programmingBooks: _programmingBooks)
-        }
     }
+}

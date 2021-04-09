@@ -52,17 +52,17 @@ struct FoodDetailView: View {
             }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-        HStack {
-            Button(action: {
-                print("返回回主畫面")
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("返回")
-                    .fontWeight(.semibold)
-                    .font(.title)
+            VStack {
+                Button(action: {
+                    print("返回回主畫面")
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("返回")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
+                .buttonStyle(CancelButtonBackgroundStyle())
             }
-            .buttonStyle(CancelButtonBackgroundStyle())
-        }
     }
 }
 
