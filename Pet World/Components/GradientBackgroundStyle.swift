@@ -15,7 +15,7 @@ struct GradientBackgroundStyle: ButtonStyle {
             .foregroundColor(.white)
             .background(Color("Moderate blue"))
             .cornerRadius(40)
-            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
     }
 }

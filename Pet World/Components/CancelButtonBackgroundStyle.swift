@@ -12,7 +12,7 @@ struct CancelButtonBackgroundStyle: ButtonStyle {
         configuration.label
             .frame(minWidth: 0, maxWidth: .infinity)
             .padding()
-            .foregroundColor(Color("Gray"))
+            .foregroundColor(Color("Very Dark Gray"))
             .background(Color("Light grayish red"))
             .cornerRadius(40)
             .padding(.horizontal, 20)

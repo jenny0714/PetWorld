@@ -10,6 +10,15 @@ struct WaterDetailView: View {
     @Environment(\.presentationMode) private var presentationMode
     @State private var didTap : Bool = false
     var body: some View {
+        VStack(alignment: .center) {
+            Text("喝的種類")
+                .fontWeight(.semibold)
+                .font(.title)
+                .foregroundColor(Color("Very Dark Gray"))
+                .multilineTextAlignment(.center)
+                .padding([.top, .leading, .trailing])
+        }
+        List {
         VStack {
             Button(action: {
                 print("回主畫面,並新增一筆資料")
@@ -31,6 +40,10 @@ struct WaterDetailView: View {
             }
             .buttonStyle(GradientBackgroundStyle())
             
+        }
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+        HStack {
             Button(action: {
                 print("返回回主畫面")
                 self.presentationMode.wrappedValue.dismiss()
