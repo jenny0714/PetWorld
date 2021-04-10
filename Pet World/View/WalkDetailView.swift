@@ -56,7 +56,7 @@ struct WalkDetailView: View {
                 .buttonStyle(GradientBackgroundStyle())
             }
         }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+        .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
         VStack {
             Button(action: {
                 print("返回回主畫面")
