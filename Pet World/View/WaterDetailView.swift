@@ -39,7 +39,6 @@ struct WaterDetailView: View {
                     .font(.title)
             }
             .buttonStyle(GradientBackgroundStyle())
-            
         }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))

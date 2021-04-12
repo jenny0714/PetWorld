@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Pet World
 //
 //  Created by Jenny Lin on 2021/4/5.
@@ -19,7 +19,7 @@ let _programmingBooks: [ProgrammingBook] = [
     ProgrammingBook(name: "散步步", imageName: "Paw"),
 ]
 
-struct ContentView: View {
+struct HomeView: View {
     @State private var showingFoodDetail = false
     @State private var showingWaterDetail = false
     @State private var showingPupuDetail = false
@@ -108,8 +108,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-            ContentView(programmingBooks: _programmingBooks)
+            HomeView(programmingBooks: _programmingBooks)
     }
 }

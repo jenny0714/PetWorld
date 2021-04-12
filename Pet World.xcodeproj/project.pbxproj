@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C60A7571261D9B75009FEFB5 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A7570261D9B75009FEFB5 /* FoodDetailView.swift */; };
+		C623772F26246FFB00DE5618 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623772E26246FFB00DE5618 /* CameraService.swift */; };
+		C62377322624784600DE5618 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62377312624784600DE5618 /* SplashView.swift */; };
 		C6945A6726202D520043F8EE /* WaterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A6626202D520043F8EE /* WaterDetailView.swift */; };
 		C6945A6B26202E340043F8EE /* GradientBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A6A26202E340043F8EE /* GradientBackgroundStyle.swift */; };
 		C6945A722620376D0043F8EE /* PupuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A712620376D0043F8EE /* PupuDetailView.swift */; };
 		C6945A75262039E20043F8EE /* WalkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A74262039E20043F8EE /* WalkDetailView.swift */; };
 		C6945A7926203F370043F8EE /* CancelButtonBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A7826203F370043F8EE /* CancelButtonBackgroundStyle.swift */; };
 		C69E539C261AF020008031AE /* Pet_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539B261AF020008031AE /* Pet_WorldApp.swift */; };
-		C69E539E261AF020008031AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539D261AF020008031AE /* ContentView.swift */; };
+		C69E539E261AF020008031AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539D261AF020008031AE /* HomeView.swift */; };
 		C69E53A0261AF024008031AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69E539F261AF024008031AE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C60A7570261D9B75009FEFB5 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		C623772E26246FFB00DE5618 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		C62377312624784600DE5618 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C6945A6626202D520043F8EE /* WaterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDetailView.swift; sourceTree = "<group>"; };
 		C6945A6A26202E340043F8EE /* GradientBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundStyle.swift; sourceTree = "<group>"; };
 		C6945A712620376D0043F8EE /* PupuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupuDetailView.swift; sourceTree = "<group>"; };
@@ -27,7 +31,7 @@
 		C6945A7826203F370043F8EE /* CancelButtonBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonBackgroundStyle.swift; sourceTree = "<group>"; };
 		C69E5398261AF020008031AE /* Pet World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69E539B261AF020008031AE /* Pet_WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet_WorldApp.swift; sourceTree = "<group>"; };
-		C69E539D261AF020008031AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C69E539D261AF020008031AE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C69E539F261AF024008031AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C69E53A4261AF024008031AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +52,7 @@
 			children = (
 				C6945A6A26202E340043F8EE /* GradientBackgroundStyle.swift */,
 				C6945A7826203F370043F8EE /* CancelButtonBackgroundStyle.swift */,
+				C623772E26246FFB00DE5618 /* CameraService.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -83,7 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				C69E539B261AF020008031AE /* Pet_WorldApp.swift */,
-				C69E539D261AF020008031AE /* ContentView.swift */,
+				C62377312624784600DE5618 /* SplashView.swift */,
+				C69E539D261AF020008031AE /* HomeView.swift */,
 				C6945A6E262031CA0043F8EE /* Components */,
 				C6945A6F2620321C0043F8EE /* View */,
 				C69E539F261AF024008031AE /* Assets.xcassets */,
@@ -168,14 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C69E539E261AF020008031AE /* ContentView.swift in Sources */,
+				C69E539E261AF020008031AE /* HomeView.swift in Sources */,
 				C6945A722620376D0043F8EE /* PupuDetailView.swift in Sources */,
 				C6945A6B26202E340043F8EE /* GradientBackgroundStyle.swift in Sources */,
 				C6945A75262039E20043F8EE /* WalkDetailView.swift in Sources */,
 				C6945A6726202D520043F8EE /* WaterDetailView.swift in Sources */,
 				C6945A7926203F370043F8EE /* CancelButtonBackgroundStyle.swift in Sources */,
 				C60A7571261D9B75009FEFB5 /* FoodDetailView.swift in Sources */,
+				C62377322624784600DE5618 /* SplashView.swift in Sources */,
 				C69E539C261AF020008031AE /* Pet_WorldApp.swift in Sources */,
+				C623772F26246FFB00DE5618 /* CameraService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
