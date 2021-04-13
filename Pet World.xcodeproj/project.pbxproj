@@ -18,6 +18,7 @@
 		C69E539C261AF020008031AE /* Pet_WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539B261AF020008031AE /* Pet_WorldApp.swift */; };
 		C69E539E261AF020008031AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E539D261AF020008031AE /* HomeView.swift */; };
 		C69E53A0261AF024008031AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69E539F261AF024008031AE /* Assets.xcassets */; };
+		C6DFE5B226249115005CC0C6 /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFE5B126249115005CC0C6 /* PetListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C69E539D261AF020008031AE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C69E539F261AF024008031AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C69E53A4261AF024008031AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6DFE5B126249115005CC0C6 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				C6945A6626202D520043F8EE /* WaterDetailView.swift */,
 				C6945A712620376D0043F8EE /* PupuDetailView.swift */,
 				C6945A74262039E20043F8EE /* WalkDetailView.swift */,
+				C6DFE5B126249115005CC0C6 /* PetListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				C60A7571261D9B75009FEFB5 /* FoodDetailView.swift in Sources */,
 				C62377322624784600DE5618 /* SplashView.swift in Sources */,
 				C69E539C261AF020008031AE /* Pet_WorldApp.swift in Sources */,
+				C6DFE5B226249115005CC0C6 /* PetListView.swift in Sources */,
 				C623772F26246FFB00DE5618 /* CameraService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,17 +1,17 @@
 //
-//  FoodDetailView.swift
+//  PetListView.swift
 //  Pet World
 //
-//  Created by Jenny Lin on 2021/4/7.
+//  Created by Jenny Lin on 2021/4/12.
 //
 
 import SwiftUI
 
-struct FoodDetailView: View {
+struct PetListView: View {
     @Environment(\.presentationMode) private var presentationMode
     var body: some View {
         VStack(alignment: .center) {
-            Text("吃的種類")
+            Text("狗狗/貓貓 的名字")
                 .fontWeight(.semibold)
                 .font(.title)
                 .foregroundColor(Color("Very Dark Gray"))
@@ -66,8 +66,8 @@ struct FoodDetailView: View {
     }
 }
 
-struct FoodView_Previews: PreviewProvider {
+struct PetList_Previews: PreviewProvider {
     static var previews: some View {
-        FoodDetailView()
+        PetListView()
     }
 }
