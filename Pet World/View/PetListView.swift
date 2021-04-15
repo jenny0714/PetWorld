@@ -9,60 +9,52 @@ import SwiftUI
 
 struct PetListView: View {
     @Environment(\.presentationMode) private var presentationMode
+    @State private var name = ""
+    
     var body: some View {
         VStack(alignment: .center) {
-            Text("狗狗/貓貓 的名字")
+            Text("家裡狗狗/貓貓 的名字")
                 .fontWeight(.semibold)
                 .font(.title)
                 .foregroundColor(Color("Very Dark Gray"))
                 .multilineTextAlignment(.center)
                 .padding([.top, .leading, .trailing])
         }
+        
         List {
             VStack {
                 Button(action: {
                     print("回主畫面,並新增一筆資料")
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
-                    Text("飼料")
-                        .fontWeight(.semibold)
-                        .font(.title)
+                    HStack{
+                        Image("Dog")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                        Text("Curry")
+                            .padding()
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(Color("Very Dark Gray"))
+                        Spacer()
+                    }
                 }
-                .buttonStyle(GradientBackgroundStyle())
-
-                Button(action: {
-                    print("回主畫面,並新增一筆資料")
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("鮮食")
-                        .fontWeight(.semibold)
-                        .font(.title)
-                }
-                .buttonStyle(GradientBackgroundStyle())
-
-                Button(action: {
-                    print("回主畫面,並新增一筆資料")
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("罐頭")
-                        .fontWeight(.semibold)
-                        .font(.title)
-                }
-                .buttonStyle(GradientBackgroundStyle())
             }
+            .padding(.horizontal)
         }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-            VStack {
-                Button(action: {
-                    print("返回回主畫面")
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("返回")
-                        .fontWeight(.semibold)
-                        .font(.title)
-                }
-                .buttonStyle(CancelButtonBackgroundStyle())
+        
+        VStack {
+            Button(action: {
+                print("返回回主畫面")
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("返回")
+                    .fontWeight(.semibold)
+                    .font(.title)
             }
+            .buttonStyle(CancelButtonBackgroundStyle())
+        }
     }
 }
 

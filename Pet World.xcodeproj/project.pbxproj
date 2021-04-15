@@ -10,6 +10,7 @@
 		C60A7571261D9B75009FEFB5 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A7570261D9B75009FEFB5 /* FoodDetailView.swift */; };
 		C623772F26246FFB00DE5618 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623772E26246FFB00DE5618 /* CameraService.swift */; };
 		C62377322624784600DE5618 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62377312624784600DE5618 /* SplashView.swift */; };
+		C65B45F42625DEB2002EE13E /* PetRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B45F32625DEB2002EE13E /* PetRecordView.swift */; };
 		C6945A6726202D520043F8EE /* WaterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A6626202D520043F8EE /* WaterDetailView.swift */; };
 		C6945A6B26202E340043F8EE /* GradientBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A6A26202E340043F8EE /* GradientBackgroundStyle.swift */; };
 		C6945A722620376D0043F8EE /* PupuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945A712620376D0043F8EE /* PupuDetailView.swift */; };
@@ -25,6 +26,7 @@
 		C60A7570261D9B75009FEFB5 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 		C623772E26246FFB00DE5618 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		C62377312624784600DE5618 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		C65B45F32625DEB2002EE13E /* PetRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRecordView.swift; sourceTree = "<group>"; };
 		C6945A6626202D520043F8EE /* WaterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDetailView.swift; sourceTree = "<group>"; };
 		C6945A6A26202E340043F8EE /* GradientBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundStyle.swift; sourceTree = "<group>"; };
 		C6945A712620376D0043F8EE /* PupuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupuDetailView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				C6945A712620376D0043F8EE /* PupuDetailView.swift */,
 				C6945A74262039E20043F8EE /* WalkDetailView.swift */,
 				C6DFE5B126249115005CC0C6 /* PetListView.swift */,
+				C65B45F32625DEB2002EE13E /* PetRecordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				C6945A6B26202E340043F8EE /* GradientBackgroundStyle.swift in Sources */,
 				C6945A75262039E20043F8EE /* WalkDetailView.swift in Sources */,
 				C6945A6726202D520043F8EE /* WaterDetailView.swift in Sources */,
+				C65B45F42625DEB2002EE13E /* PetRecordView.swift in Sources */,
 				C6945A7926203F370043F8EE /* CancelButtonBackgroundStyle.swift in Sources */,
 				C60A7571261D9B75009FEFB5 /* FoodDetailView.swift in Sources */,
 				C62377322624784600DE5618 /* SplashView.swift in Sources */,

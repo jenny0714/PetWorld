@@ -6,6 +6,7 @@
 // Image("chicken leg")
 
 import SwiftUI
+import SQLite3
 struct ProgrammingBook: Identifiable {
     var id = UUID()
     var name: String
