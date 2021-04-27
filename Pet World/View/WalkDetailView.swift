@@ -57,9 +57,10 @@ struct WalkDetailView: View {
             }
         }
         .padding(EdgeInsets(top: 200, leading: 0, bottom: 5, trailing: 0))
+        
         VStack {
             Button(action: {
-                print("返回回主畫面")
+                print("返回主畫面")
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("返回")

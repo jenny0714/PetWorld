@@ -26,6 +26,8 @@ struct HomeView: View {
     @State private var showingPupuDetail = false
     @State private var showingWalkDetail = false
     @State private var showingPetList = false
+    @State private var showingPetRecord = false
+    
 
     var programmingBooks: [ProgrammingBook] = _programmingBooks
     var body: some View {
@@ -40,7 +42,7 @@ struct HomeView: View {
                             .scaledToFit()
                             .frame(width: 48, height: 48)
                             .sheet(isPresented: $showingPetList) {
-                                PetListView()
+                                PetListView(showingPetRecord: self.$showingPetRecord)
                             }
                     }
                 Spacer()
@@ -125,6 +127,24 @@ struct HomeView: View {
                         }
                     }
                 }
+            }
+            VStack(alignment: HorizontalAlignment.trailing) {
+                Spacer()
+                HStack {
+                Spacer()
+                    Button(action: {
+                        showingPetRecord = true
+                    }) {
+                        Image("info_logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 70, height: 70)
+                            .sheet(isPresented: $showingPetRecord) {
+                                PetRecordView()
+                            }
+                    }
+                }.padding()
+            
             }
         }
     }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PetListView: View {
     @Environment(\.presentationMode) private var presentationMode
+    @Binding var showingPetRecord: Bool
+
     @State private var name = ""
     
     var body: some View {
@@ -18,14 +20,15 @@ struct PetListView: View {
                 .font(.title)
                 .foregroundColor(Color("Very Dark Gray"))
                 .multilineTextAlignment(.center)
-                .padding([.top, .leading, .trailing])
+                .padding(.all)
         }
         
         List {
             VStack {
                 Button(action: {
-                    print("回主畫面,並新增一筆資料")
+                    print("到記錄頁,並新增一筆資料")
                     self.presentationMode.wrappedValue.dismiss()
+                    showingPetRecord = true
                 }) {
                     HStack{
                         Image("Dog")
@@ -38,28 +41,31 @@ struct PetListView: View {
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                             .foregroundColor(Color("Very Dark Gray"))
                         Spacer()
+                            
                     }
                 }
-            }
             .padding(.horizontal)
+            }
         }
         
         VStack {
-            Button(action: {
-                print("返回回主畫面")
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("返回")
-                    .fontWeight(.semibold)
-                    .font(.title)
-            }
-            .buttonStyle(CancelButtonBackgroundStyle())
+                Button(action: {
+                    print("返回回主畫面")
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("返回")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
+                .buttonStyle(CancelButtonBackgroundStyle())
+            
         }
     }
 }
 
-struct PetList_Previews: PreviewProvider {
+struct PetListView_Previews: PreviewProvider {
     static var previews: some View {
-        PetListView()
+        PetListView(showingPetRecord: .constant(false))
     }
 }
+
