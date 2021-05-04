@@ -5,8 +5,8 @@
 //  Created by Jenny Lin on 2021/4/5.
 // Image("chicken leg")
 
-import SwiftUI
 import SQLite3
+import SwiftUI
 struct ProgrammingBook: Identifiable {
     var id = UUID()
     var name: String
@@ -27,7 +27,6 @@ struct HomeView: View {
     @State private var showingWalkDetail = false
     @State private var showingPetList = false
     @State private var showingPetRecord = false
-    
 
     var programmingBooks: [ProgrammingBook] = _programmingBooks
     var body: some View {
@@ -45,12 +44,23 @@ struct HomeView: View {
                                 PetListView(showingPetRecord: self.$showingPetRecord)
                             }
                     }
-                Spacer()
+                    Spacer()
                 }.padding()
-            Spacer()
+                Spacer()
             }
 
             VStack(alignment: .center) {
+                HStack {
+                    Button(action: {
+                        print("跳轉到詳細頁")
+                    }) {
+                        Image("Pet Profile")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150, height: 150)
+                    }
+                }
+              
                 HStack {
                     Button(action: {
                         showingFoodDetail = true
@@ -131,7 +141,7 @@ struct HomeView: View {
             VStack(alignment: HorizontalAlignment.trailing) {
                 Spacer()
                 HStack {
-                Spacer()
+                    Spacer()
                     Button(action: {
                         showingPetRecord = true
                     }) {
@@ -144,7 +154,6 @@ struct HomeView: View {
                             }
                     }
                 }.padding()
-            
             }
         }
     }

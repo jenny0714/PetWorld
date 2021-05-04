@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PetRecordView: View {
+    @Environment(\.presentationMode) private var presentationMode
     @State private var name = ""
     
     var body: some View {
@@ -32,6 +33,17 @@ struct PetRecordView: View {
         }
         }
         
+        VStack {
+                Button(action: {
+                    print("返回回主畫面")
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("返回")
+                        .fontWeight(.semibold)
+                        .font(.title)
+                }
+                .buttonStyle(CancelButtonBackgroundStyle())
+        }
     }
 }
 

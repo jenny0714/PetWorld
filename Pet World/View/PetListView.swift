@@ -10,7 +10,6 @@ import SwiftUI
 struct PetListView: View {
     @Environment(\.presentationMode) private var presentationMode
     @Binding var showingPetRecord: Bool
-
     @State private var name = ""
     
     var body: some View {
