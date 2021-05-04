@@ -138,6 +138,7 @@ struct HomeView: View {
                     }
                 }
             }
+            
             VStack(alignment: HorizontalAlignment.trailing) {
                 Spacer()
                 HStack {
