@@ -9,48 +9,56 @@ import SwiftUI
 
 struct PetRecordView: View {
     @Environment(\.presentationMode) private var presentationMode
-    @State private var name: String = "Curry"
+    @State private var name: String = "Ex: 咖哩"
     @State private var isNameFieldEditable: Bool = false
-    
-    func getButtonIcon() -> String{
-        if(isNameFieldEditable){
+
+    func getButtonIcon() -> String {
+        if isNameFieldEditable {
             return "checkmark"
-        }else{
+        } else {
             return "pencil"
         }
     }
-    
-    func getButtonColor() -> Color{
-        if(isNameFieldEditable){
+
+    func getButtonColor() -> Color {
+        if isNameFieldEditable {
             return Color.green
-        }else{
+        } else {
             return Color("Very Dark Gray")
         }
     }
-    
-    
+
     var body: some View {
-        VStack(alignment: HorizontalAlignment.center) {
+        VStack {
             Image("Pet Profile")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 200, height: 200)
                 .clipShape(Circle())
+                .padding()
+            Spacer()
             HStack {
-                Spacer()
-                if(isNameFieldEditable){
+                if isNameFieldEditable {
                     TextField("寶貝的名字：", text: $name) { editing in
                         print("onEditingChanged", editing)
                     } onCommit: {
                         print(name)
                     }
+                    .padding(.all)
                     .multilineTextAlignment(.center)
-                    .padding()
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
-                }else{
-                    Text(name)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("Moderate blue"), lineWidth: 3))
+                    .foregroundColor(Color.black)
+                    .font(/*@START_MENU_TOKEN@*/ .title/*@END_MENU_TOKEN@*/)
+
+                } else {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        Text(name).font(/*@START_MENU_TOKEN@*/ .title/*@END_MENU_TOKEN@*/).foregroundColor(Color.gray)
+                        Spacer()
+                    }
+                    .padding(.all)
                 }
-                Spacer()
+
                 Button(action: {
                     isNameFieldEditable = !isNameFieldEditable
                 }) {
@@ -60,8 +68,11 @@ struct PetRecordView: View {
                         .font(.system(size: 35, weight: .bold))
                 }
             }
+            .padding(.all)
         }
-        List{}
+
+        List {}
+
         VStack {
             Button(action: {
                 print("返回回主畫面")
