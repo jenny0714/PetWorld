@@ -30,13 +30,27 @@ struct PetRecordView: View {
 
     var body: some View {
         VStack {
-            Image("Pet Profile")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 200, height: 200)
-                .clipShape(Circle())
-                .padding()
-            Spacer()
+            ZStack(alignment: .bottom) {
+                Image("Pet Profile")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 200, height: 200)
+                    .clipShape(Circle())
+                    .padding(.bottom, 30)
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "camera")
+                        .foregroundColor(Color("Very Dark Gray"))
+                        .font(.system(size:30, weight: .medium))
+                        .frame(width: 20, height: 20)
+                        .padding(.all)
+                        .background(Color("Light grayish red"))
+                        .clipShape(Circle())
+                        .shadow(radius: 30)
+                        .offset(x:50, y:-10)
+                }
+            }
             HStack {
                 if isNameFieldEditable {
                     TextField("寶貝的名字：", text: $name) { editing in
@@ -58,7 +72,6 @@ struct PetRecordView: View {
                     }
                     .padding(.all)
                 }
-
                 Button(action: {
                     isNameFieldEditable = !isNameFieldEditable
                 }) {
@@ -90,5 +103,6 @@ struct PetRecordView: View {
 struct PetRecordView_Previews: PreviewProvider {
     static var previews: some View {
         PetRecordView()
+            .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
     }
 }

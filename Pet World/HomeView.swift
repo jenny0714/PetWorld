@@ -57,7 +57,7 @@ struct HomeView: View {
                         Image("Pet Profile")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 250, height: 250)
                     }
                 }
               
@@ -66,15 +66,15 @@ struct HomeView: View {
                         showingFoodDetail = true
                     }) {
                         VStack {
-                            Image("Bowl")
+                            Image("DogFood_icon")
                                 .resizable()
                                 .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text("Food")
                                 .fontWeight(.semibold)
                                 .font(.title)
-                                .foregroundColor(Color.green)
+                                .foregroundColor(Color("Moderate blue"))
                                 .sheet(isPresented: $showingFoodDetail) {
                                     FoodDetailView()
                                 }
@@ -85,14 +85,15 @@ struct HomeView: View {
                         showingWaterDetail = true
                     }) {
                         VStack {
-                            Image("Water")
+                            Image("DogDrink_icon")
                                 .resizable()
                                 .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text("Water")
                                 .fontWeight(.semibold)
                                 .font(.title)
+                                .foregroundColor(Color("Moderate blue"))
                                 .sheet(isPresented: $showingWaterDetail) {
                                     WaterDetailView()
                                 }
@@ -104,15 +105,15 @@ struct HomeView: View {
                         showingPupuDetail = true
                     }) {
                         VStack {
-                            Image("Pupu")
+                            Image("DogPupu_icon")
                                 .resizable()
                                 .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text("Pupu")
                                 .fontWeight(.semibold)
                                 .font(.title)
-                                .foregroundColor(Color.pink)
+                                .foregroundColor(Color("Moderate blue"))
                                 .sheet(isPresented: $showingPupuDetail) {
                                     PupuDetailView()
                                 }
@@ -122,15 +123,15 @@ struct HomeView: View {
                         showingWalkDetail = true
                     }) {
                         VStack {
-                            Image("Paw")
+                            Image("DogWalk_icon")
                                 .resizable()
                                 .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text("Walk")
                                 .fontWeight(.semibold)
                                 .font(.title)
-                                .foregroundColor(Color.orange)
+                                .foregroundColor(Color("Moderate blue"))
                                 .sheet(isPresented: $showingWalkDetail) {
                                     WalkDetailView()
                                 }
